@@ -1,0 +1,20 @@
+{
+  "name": "signalutbildningen",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node website/build.mjs",
+    "preview": "node website/serve.mjs",
+    "test": "node --test website/tests/*.test.mjs",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@mdit/plugin-katex": "0.25.2",
+    "@playwright/test": "1.62.0",
+    "katex": "0.16.47",
+    "markdown-it": "14.3.2"
+  }
+}
