@@ -1,4 +1,4 @@
-// Sampling conventions match the first two cells of code_generator.ipynb.
+// The sine demo samples two seconds at 500 points, including both endpoints.
 export function sineWave(amplitude = 1, frequency = 1, phase = 0) {
   return Array.from({ length: 500 }, (_, i) => {
     const t = 2 * i / 499;
@@ -6,6 +6,7 @@ export function sineWave(amplitude = 1, frequency = 1, phase = 0) {
   });
 }
 
+// The domain demo samples one second at 1000 Hz, excluding the endpoint.
 export function timeSignal(amplitude, frequency) {
   return Array.from({ length: 1000 }, (_, i) => {
     const t = i / 1000;
@@ -13,7 +14,7 @@ export function timeSignal(amplitude, frequency) {
   });
 }
 
-// DFT bins 0..25 are exactly the visible bins of np.fft.fft at fs=1000.
+// Show unnormalized DFT magnitudes for bins 0..25 at a sample rate of 1000 Hz.
 // Cache the basis so moving a slider only requires multiply-and-add operations.
 const basis = Array.from({ length: 26 }, (_, k) =>
   Array.from({ length: 1000 }, (_, n) => {

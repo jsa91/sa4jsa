@@ -2,13 +2,24 @@
 
 **[Öppna utbildningen](https://jsa91.github.io/sa4jsa/)**
 
-[Läs originalet som Markdown](utbildningen/html/index.md).
+[Läs föreläsningens källtext som Markdown](utbildningen/html/index.md).
 
 ## Föreläsningen som webbplats
 
 Webbplatsen har en introduktion, fem kapitelsidor och interaktiva demonstrationer
 av sinusvågen samt tids- och frekvensdomänen. Språket är svenska. Reglagen kör
 beräkningar i webbläsaren; besökaren behöver varken Python eller Codespaces.
+
+### Projektstruktur
+
+- `utbildningen/html/` — föreläsningens källtext och de åtta bilder som används på webbplatsen.
+- `website/` — sidbygge, stilmall, interaktiva demonstrationer och lokal förhandsgranskningsserver.
+- `website/tests/` — tester av signalberäkningar och webbplatsen i webbläsare.
+- `.github/workflows/pages.yml` — automatisk publicering till GitHub Pages.
+- `package.json`, `package-lock.json` och `playwright.config.mjs` — beroenden, kommandon och testkonfiguration.
+
+`dist/` genereras vid bygget. Beroenden och testresultat genereras lokalt och
+versionshanteras inte. Äldre notebookar och referens-PDF:er finns i Git-historiken.
 
 ### Under föreläsningen
 
@@ -96,10 +107,9 @@ kör `npm run build` igen. Kapitelindelningen hämtas från de fem befintliga
 så att länkarna fortsätter fungera. Bilderna kopieras från samma katalog.
 Bygget visar kapiteltexten utan de hopfällbara omslagen och länkar mellan sidorna.
 
-Originalbilderna och [kodnotebooken](utbildningen/code_generator.ipynb) finns kvar.
-De två demonstrationerna är JavaScript-versioner av notebookens beräkningar,
-inte en Python-miljö. Om beräkningarna ändras i notebooken behöver motsvarande
-ändring göras i `website/signals.mjs` och verifieras med testerna.
+De två demonstrationernas signalberäkningar finns i `website/signals.mjs`.
+Ändra beräkningarna där och verifiera med testerna. NumPy används som en
+oberoende referens i beräkningstesterna och behövs bara för `npm test`.
 
 ### Publicera på en webbserver
 

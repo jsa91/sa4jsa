@@ -41,7 +41,7 @@ test('time signals and visible DFT bins match NumPy FFT, including spectral leak
     assert.equal(samples.at(-1)[0], 0.999);
   });
 });
-test('default positive-frequency peaks preserve the notebook scaling', () => {
+test('integer-frequency sine peaks have unnormalized magnitude amplitude × sample count / 2', () => {
   [1,2,3,4].forEach((amplitude) => {
     const bins = spectrum(timeSignal(amplitude, amplitude*5));
     const peak = bins.reduce((best, point) => point[1] > best[1] ? point : best);
