@@ -1,6 +1,6 @@
 # SA4JSA — Grunder i fysik & radioteknik
 
-**[Öppna utbildningen](https://jsa91.github.io/01-jupyter/)**
+**[Öppna utbildningen](https://jsa91.github.io/sa4jsa/)**
 
 [Läs originalet som Markdown](utbildningen/html/index.md).
 
@@ -12,7 +12,7 @@ beräkningar i webbläsaren; besökaren behöver varken Python eller Codespaces.
 
 ### Under föreläsningen
 
-Öppna <https://jsa91.github.io/01-jupyter/> och välj kapitel i menyn. Kapitel 1
+Öppna <https://jsa91.github.io/sa4jsa/> och välj kapitel i menyn. Kapitel 1
 och 2 innehåller interaktiva reglage. Kapitel 2 börjar med en signal; välj fler
 under **Antal signaler**. **Återställ** återgår till grundvärdena. Ändringar med
 reglagen gäller bara i din webbläsare och sparas inte till webbplatsen.
@@ -21,13 +21,13 @@ Studenterna kan använda samma länk utan att logga in på GitHub.
 
 ### Ändra text direkt på GitHub
 
-1. Öppna [lecturefilen på GitHub](https://github.com/jsa91/01-jupyter/blob/main/utbildningen/html/index.md)
+1. Öppna [lecturefilen på GitHub](https://github.com/jsa91/sa4jsa/blob/main/utbildningen/html/index.md)
    och klicka på pennan (**Edit this file**).
 2. Ändra texten. Behåll kapitelomslagen (`<details>`, `<summary>`) och rubrikernas
    `chapter-…`-id så att bygget och kapitellänkarna fungerar.
 3. Klicka **Commit changes**, skriv en kort beskrivning och spara till `main`.
    Om du använder en separat gren behöver den först slås ihop med `main`.
-4. Följ [publiceringen under Actions](https://github.com/jsa91/01-jupyter/actions/workflows/pages.yml).
+4. Följ [publiceringen under Actions](https://github.com/jsa91/sa4jsa/actions/workflows/pages.yml).
    När **Publish lecture to GitHub Pages** är grön är den nya versionen publicerad.
    Ladda om föreläsningssidan för att se ändringarna.
 
@@ -71,7 +71,7 @@ För att ångra en publicerad textändring: återställ texten och gör en ny co
 I en lokal klon kan du använda `git revert <commit-id>` och sedan `git push`.
 
 Publiceringen konfigureras under
-[Settings → Pages](https://github.com/jsa91/01-jupyter/settings/pages), med
+[Settings → Pages](https://github.com/jsa91/sa4jsa/settings/pages), med
 **GitHub Actions** som källa. Endast det genererade innehållet i `dist/` publiceras.
 
 ### Bygg och förhandsgranska
