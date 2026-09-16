@@ -92,16 +92,18 @@ I föregående kapitel har vi undersökt matematiska och fysikaliska fenomen med
 
 I grafen nedan visas en signal i **tidsdomänen**, där **tid (s)** är på x-axeln, samt en signal i **frekvensdomänen**, där **frekvens (Hz)** är på x-axeln.
 
-### Varför är det viktigt?
-Det finns många anledningar till varför det är viktigt att kunna analysera en signal i olika domäner. Den mest uppenbara är att det förenklar studien av repetitiva fenomen, såsom radiovågor.
-
-<br>
-
 <div align="center">
 
 ![Domäner](./time_freq_domain.jpg "Tid/Frekvens")
 
 </div>
+
+### Varför är det viktigt?
+Det finns många anledningar till varför det är viktigt att kunna analysera en signal i olika domäner. Den mest uppenbara är att det förenklar studien av repetitiva fenomen, såsom radiovågor.
+
+<br>
+
+<!-- demo:domains -->
 
 <br>
 

@@ -46,13 +46,14 @@ for (const [index, page] of pages.entries()) {
   const body = page.body.replace(/^\s*<br>\s*$/gm, '').replace(/\s*---\s*$/, '');
   let html = md.render(body);
   if (html.includes('katex-error')) throw new Error(`Invalid formula in ${page.title}`);
-  if (index === 1 || index === 2) {
-    const image = index === 1 ? 'sine_wave.png' : 'time_freq_domain.jpg';
-    // Match only the image's containing block, avoiding earlier centered sections.
-    const position = html.indexOf(`<img src="./${image}"`);
-    const close = html.indexOf('</div>', position);
-    if (position < 0 || close < 0) throw new Error(`Missing demo insertion point: ${image}`);
-    html = html.slice(0, close + 6) + demo(index === 1 ? 'sine' : 'domains') + html.slice(close + 6);
+  if (index === 1) {
+    const position = html.indexOf('<h3>Varför är det viktigt?</h3>');
+    if (position < 0) throw new Error('Missing sine demo insertion heading');
+    html = html.slice(0, position) + demo('sine') + html.slice(position);
+  } else if (index === 2) {
+    const marker = '<!-- demo:domains -->';
+    if (!html.includes(marker)) throw new Error('Missing domains demo insertion marker');
+    html = html.replace(marker, demo('domains'));
   }
   const nav = pages.map((item, i) => `<a href="${item.file}"${i === index ? ' aria-current="page"' : ''}>${escape(item.label)}</a>`).join('');
   const prev = pages[index - 1];
