@@ -10,6 +10,7 @@ Efter genomförd utbildning ska individen kunna se grundläggande samband mellan
 
 - Sinusvågen
 - Tid och frekvens
+- Frekvensspektrum
 - dB och brus
 - Kapacitet
 
